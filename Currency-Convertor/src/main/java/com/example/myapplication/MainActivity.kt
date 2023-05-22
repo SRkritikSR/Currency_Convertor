@@ -80,6 +80,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // this function runs after the text has been changed
     private fun onTextChanged()  {
         et_currencyFrom.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -87,7 +88,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                Log.d("main","beforeTextChanged")
+                Log.d("main","before Text has been changed")
             }
 
             override fun afterTextChanged(p0: Editable?) {
