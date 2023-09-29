@@ -49,6 +49,8 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         et_currencyFrom=findViewById(R.id.currencyFrom)
         et_currencyTo=findViewById(R.id.currencyTo)
+        et_currencyTo.isFocusable = false
+        et_currencyTo.setText("Loading result")
         spinnerSetup()
         onTextChanged()
     }
@@ -66,6 +68,7 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             } else {
                 GlobalScope.launch(Dispatchers.IO) {
+                    Log.d("main","valueof currencty from is ${currencyFrom}and ${currencyTo}")
                     val resultObject = ExchangeRatesApi.getExchangeRate(
                         currencyFrom,
                         currencyTo,

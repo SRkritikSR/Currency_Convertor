@@ -8,6 +8,7 @@ object ExchangeRatesApi {
     private const val FIXER_API_KEY="2cNl5awTsXwokpmA1NeryUhOWCWfiX4V"
 
     suspend fun getExchangeRate(from: String, to: String, amount: Number): ExchangeRates? {
+
         try {
             val url = "https://api.apilayer.com/exchangerates_data/convert?" +
                     "&to=$to" +

@@ -24,17 +24,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            tools:layout_editor_absoluteX="-16dp"
-            tools:layout_editor_absoluteY="244dp">
+            tools:layout_editor_absoluteX="57dp"
+            tools:layout_editor_absoluteY="46dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
+                    android:background="#FFaa"
                     android:orientation="vertical"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="2dp"
-                    android:background="#FFaa"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
