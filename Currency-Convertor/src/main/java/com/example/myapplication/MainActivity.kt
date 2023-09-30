@@ -32,15 +32,43 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
+const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
+    override fun onStart() {
+        super.onStart()
+        Log.d(TAG,"onStart is called")
+    }
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG, "onResume Called")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d(TAG, "onPause Called")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG, "onStop Called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG, "onDestroy Called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(TAG, "onRestart Called")
+    }
 
     private lateinit var submitButton: Button
     private lateinit var resultText: TextView
     private lateinit var et_currencyFrom: EditText
     private lateinit var et_currencyTo: EditText
     private lateinit var toolbar: Toolbar
-    var currencyFrom = "INR"
+    var currencyFrom = "EURO"
     var currencyTo = "USD"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -145,7 +173,6 @@ class MainActivity : AppCompatActivity() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 currencyTo = p0?.getItemAtPosition(p2).toString()
                 // call api
-
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {

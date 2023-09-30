@@ -3,7 +3,7 @@
     <string-array name="selection_list">
         <item>INR</item>
         <item>USD</item>
-        <item>EURO</item>
+        <item>EUR</item>
     </string-array>
 
 </resources>
